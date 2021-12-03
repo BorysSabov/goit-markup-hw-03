@@ -4,7 +4,9 @@
 /* Цвет уникалных текстовых элементов color: #2196F3; */
 /* Цвет кнопок при наведении и в hero #2196F3*/
 /* Раздел/ Класс/ Название */
+/* ---------Constanta----------- */
 body {
+  margin: 0px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   background-color: #ffffff;
@@ -19,8 +21,20 @@ body {
   --accent-bg-color: #2196f3;
   --button-primery-bcg-color: #2196f3;
   --button-secondary-bcg-color: #f5f4fa;
+  --secondary-bg-color: #2f303a;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .logo {
+  padding-top: 25px;
+  padding-bottom: 24px;
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
@@ -31,11 +45,44 @@ body {
   color: var(--accent-text-color);
 }
 .list {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* ---------Constanta--------- */
+/* //////////////////////////////-header////////////////////////////////Шапка */
+/* ---------nav-page---------*/
+.nav-page {
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid #eeeeee;
+}
+.site-nav {
+  display: flex;
+}
+.link-nav {
+  display: flex;
+  margin-left: 90px;
+}
 
-/* /site-nav logo link/ Шапка*/
+.link-nav .item + .item {
+  margin-left: 50px;
+}
+
 .link-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -51,7 +98,22 @@ body {
 .link-nav .link.current {
   color: var(--accent-text-color);
 }
+
+/*--------- auth-nav---------*/
+.auth-nav {
+  margin-left: auto;
+  display: flex;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
 .auth-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -59,14 +121,22 @@ body {
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
 }
+
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-text-color);
 }
-/* main / /Уникальный контент*/
+/* //////////////////////////main/////////////////////////Уникальный контент/////////*/
 
-/*  hero/ hero /Герой*/
+/*---------Герой---------*/
+.hero-section {
+  background-color: var(--secondary-bg-color);
+}
 .hero-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 200px;
+  padding-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36em;
@@ -74,6 +144,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.button-box {
+  display: block;
+  padding-bottom: 200px;
 }
 .hero-section .button .accent {
   font-weight: 700;
@@ -92,51 +167,128 @@ body {
   background-color: var(--accent-bg-color);
 }
 
-/* sections / priorities / Приоритеты */
+/*---------Приоритеты---------*/
+
 .section-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--secondary-text-color);
 }
+
 .priorities {
+  display: flex;
+  flex-wrap: wrap;
   color: var(--primery-text-color);
 }
+.priorities .item {
+  min-width: 270px;
+}
+
 .priorities-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 .priorities-text {
+  width: 270px;
+  margin: 0 auto 0 auto;
   font-size: 14px;
   line-height: 1.71;
 }
 
-/* section/   /Чем занимаемся */
+/*--------  Чем занимаемся ---------*/
+.works {
+  display: flex;
+}
+.works-title {
+  margin-bottom: 50px;
+}
+.works .item + .item {
+  min-width: 370px;
+}
+.item:not(:last-child) {
+  margin-right: 30px;
+}
 
-/* section / team / Наша команда */
+/* ---------Наша команда--------- */
+.section-team {
+  background-color: var(--button-secondary-bcg-color);
+}
+
+.team {
+  display: flex;
+}
+.border {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-background-color);
+}
+
+.team-title {
+  padding-bottom: 50px;
+}
+
 .team .teammate {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   color: var(--secondary-text-color);
+  background-color: var(--primary-background-color);
 }
+
+.teammate {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
 .teammate-text {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  padding: 0px auto 30px auto;
+  margin-bottom: 30px;
 }
-/*  Footer / / Подвал*/
+/*////////////////////////  Footer-studio/ //////////////////////// Подвал//////////*/
+.footer {
+  display: block;
+  background-color: var(--secondary-bg-color);
+}
+.white {
+  color: var(--primary-background-color);
+}
+.logo .white {
+  padding: 60px auto 0px auto;
+}
 .adress {
+  margin-top: 20px;
   font-size: 14px;
   line-height: 1.71;
   color: #ffffff;
+  font-style: normal;
+}
+.info {
+  padding-top: 9px;
 }
 .auth-footer .link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
   color: #ffffff99;
+  text-decoration: none;
 }
 .auth-footer .link:hover,
 .auth-footer .link:focus {
@@ -144,6 +296,12 @@ body {
 }
 /* Кнопки button */
 .button {
+  display: block;
+  margin: auto;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -162,15 +320,29 @@ body {
   background-color: var(--button-primery-bcg-color);
   cursor: pointer;
 }
-/* portfolio */
-/* header взят из студии*/
+/* ////////////////////////////////// portfolio ////////////////////////////////////*/
+/* ---------header--------- взят из студии*/
 
-/* main */
+/*///////////////////////////////////// main/////////////////////////////////////// */
+/*--------- button menu--------- */
 .box {
   color: var(--secondary-text-color);
 }
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
 
-.button-menu {
+.nav-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.item .button-menu {
+  min-width: 73px;
+  border-radius: 4px;
+  border-color: var(--button-secondary-bcg-color);
+  padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -185,6 +357,8 @@ body {
   background-color: var(--button-primery-bcg-color);
   cursor: pointer;
 }
+
+/*---------content---------  */
 .section-subject {
   font-weight: 700;
   font-size: 18px;
@@ -196,4 +370,31 @@ body {
   font-size: 16px;
   line-height: 1.87;
 }
-/* footer взят из студии*/
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-box .item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+.main-box .item:nth-child(3n) {
+  margin-right: 0px;
+}
+.main-box.item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.content-box {
+  border: 1px solid #eeeeee;
+}
+.section-subject {
+  margin: 0;
+  padding: 20px 24px 0 24px;
+}
+.section-desc {
+  margin: 0;
+  padding: 4px 24px 20px 24px;
+}
+
+/* /////////////////////////////////footer/////////////////////////// взят из студии*/
